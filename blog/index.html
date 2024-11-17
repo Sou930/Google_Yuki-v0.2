@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>google</title>
+        <title>Google</title>
         <link rel="shortcut icon" href="https://www.google.com/favicon.ico">
         <script>
             var doc = document;
@@ -12,36 +12,22 @@
             }
             
             function check() {
-                if (getElm('check').value == '罪刑法定主義') {
-                    getElm('result').textContent = '正解';
                     doc.cookie = 'yuki=True; path=/;';
-                    location.replace('/success'); // 正解時にリダイレクト
-                } else {
-                    getElm('result').textContent = '不正解';
-                }
+                    location.replace('/success'); 
             }
         </script>
     </head>
     <body>
         <div id="main">
-            
-            <!-- 画像を追加 -->
-            <img src="google.com width="600">
-            
-            <h1>刑法について</h1>
-            <h2>罪刑法定主義について</h2>
-            <p>日本の刑法は「罪刑法定主義」です。</p>
-            <p>罪刑法定主義とは、「法で定められていなければ罪を犯したことにはならない」という考え方です。</p>
-            <p>甲が乙を鋭利な凶器用いて殺害したとしても、法で殺人について記述が一切なければ犯罪犯したとは言えません（道徳的・倫理的・人道的な観点から善くないですが）。</p>
-            <p>どなたの本かは伏せさせて頂きますが、刑法各論及び総論読んだだけの素人が書いたものですので、間違っている箇所等あるかもしれません。</p>
-
-
-            <h3>おさらい</h3>
-            <p>Q. 日本の刑法は何主義ですか？</p>
-            <label for="check">答えを入力してください:</label>
-            <input id="check" type="text" aria-label="Answer input">
-            <input type="button" onclick="check()" value="Check">
-            <div id="result"></div>
-        </div>
+            <div style="text-align: center">
+                <img src="google-app.png" alt="右上" align="right">
+            </div>          
+            <div style="text-align: center;">
+                <!-- クリック時にcheck()関数を実行 -->
+                <img src="google-logo.png" onclick="check()" alt="Google ロゴ" />
+            </div>
+            <div style="text-align: center;">
+                <img src="google-検索.png" />
+            </div>
     </body>
 </html>
